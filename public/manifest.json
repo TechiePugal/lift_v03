@@ -1,0 +1,36 @@
+{
+  "name": "Crown Home Elevator",
+  "short_name": "Crown Home Elevator",
+  "description": "Crown Home Elevator",
+  "scope":"/",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon/Crown (1).png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/favicon/Crown (1).png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any" 
+    },
+    {
+      "src": "/favicon/Crown (1).png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any" 
+    },
+    {
+      "src": "/favicon/Crown (1).png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any" 
+    }
+  ]
+}

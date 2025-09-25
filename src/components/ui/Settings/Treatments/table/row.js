@@ -1,0 +1,54 @@
+import RowLayout from "../../../../common/table/RowLayout";
+import Button from "../../../../common/buttons/Button";
+import { AiFillDelete } from "react-icons/ai";
+import { FaEdit } from "react-icons/fa";
+
+const RowItems = ({
+  treatments,
+  index,
+  handleEditClick,
+  handleconfirmation,
+}) => {
+  return (
+    <RowLayout key={index}>
+      <td>
+        <UserDetail text={treatments?.sno} />
+      </td>
+      <td>
+        <UserDetail text={treatments.name} />
+      </td>
+      <td>
+        <UserDetail text={treatments.charges} />
+      </td>
+      <td></td>
+      <td className="w-[250px]">
+        <div className="flex items-center justify-center p-2.5 xl:p-2 col-span-full lg:col-span-1 gap-1 ">
+          <Button
+            type="secondary"
+            className="text-bodySRB py-[8px]"
+            onClick={() => handleEditClick(treatments)}
+          >
+            Edit
+          </Button>
+          <Button
+            type="danger"
+            className="text-bodySRB py-[8px]"
+            onClick={() => handleconfirmation(treatments)}
+          >
+            Delete
+          </Button>
+        </div>
+      </td>
+    </RowLayout>
+  );
+};
+
+function UserDetail({ text }) {
+  return (
+    <div className="flex items-center justify-center  p-2.5 xl:p-5 col-span-3 lg:col-span-1">
+      <p className="text-bodySRB">{text ? text : "-"}</p>
+    </div>
+  );
+}
+
+export default RowItems;

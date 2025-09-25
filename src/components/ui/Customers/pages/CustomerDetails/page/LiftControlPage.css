@@ -1,0 +1,63 @@
+/* --- Container --- */
+.lift-control-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f5f9;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Title */
+.control-title {
+  margin: 50px 0 32px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Unified Button Styles --- */
+.control-button, .door-toggle-button {
+  width: 80px; height: 80px; border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  border: 2px solid #6b7280;
+  background: #374151; color: #f9fafb;
+  font-size: 1.3rem; cursor: pointer; transition: all 0.3s ease;
+}
+.control-button img, .door-toggle-button img { width: 70%; height: 70%; object-fit: contain; }
+.control-button:hover, .door-toggle-button:hover { box-shadow: 0 4px 12px rgba(156,163,175,0.6); }
+.control-button.active, .door-toggle-button.open {
+  background: #fbbf24; border-color: #f59e0b; color: #000;
+  box-shadow: 0 0 20px rgba(250,204,21,0.8);
+}
+
+/* Floor Buttons */
+.floor-button { width: 90px; height: 90px; font-size: 1.4rem; }
+.floor-button.active { background: #fbbf24; border-color: #f59e0b; color: #000; }
+
+/* Manual UP/DOWN */
+.manual-button { width: 100px; height: 100px; font-size: 2.2rem; border-radius: 12px; border: 2px solid #64748b; color: #f8fafc; }
+.manual-button:hover { box-shadow: 0 4px 12px rgba(156,163,175,0.6); }
+.manual-button.active { background: linear-gradient(135deg,#facc15,#fbbf24); color: #000; border-color: #f59e0b; box-shadow: 0 0 20px rgba(250,204,21,0.8); }
+
+/* Floor Row */
+.floor-controls { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; }
+.floor-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 4px 8px; transition: transform 0.2s ease; }
+.floor-row:hover { transform: translateY(-1px); }
+
+/* Status Panel */
+.status-panel {
+  margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 20px;
+  padding: 24px 32px; border-radius: 24px; width: 100%; max-width: 450px;
+  background: linear-gradient(135deg,#1e293b,#334155); box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.status-item { display: flex; align-items: center; gap: 20px; width: 100%; }
+.status-label { flex-grow: 1; text-align: center; padding: 12px 20px; border-radius: 12px; background: #f3e600; color: #000000; font-weight: 600; font-size: 1.1rem; }
+.status-value { text-align: center; padding: 12px 20px; border-radius: 12px; background: #0f172a; color: #f1f5f9; font-weight: 700; font-size: 1.2rem; }
+.door-status-open {  color: #ffffff; padding: 8px 16px; border-radius: 8px; font-weight: 600; }
+.door-status-closed {  color: #fff; padding: 8px 16px; border-radius: 8px; font-weight: 600; }
